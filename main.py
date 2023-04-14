@@ -1,13 +1,11 @@
-import requests
-import json
-import pandas as pd
 from consulta import buscar_por_cep, buscar_por_end
+from menu import menu, escolher_opcao, apontar_funcoes
 
-# Escolha o tipo de busca
-
-opcao = input('[1] Busca por CEP\n[2] Busca por Endereço\n\n')
-
-if opcao == '1':
-    buscar_por_cep()
+valor = ''
+while valor != '4':
+    menu()
+    valor = escolher_opcao()
+    apontar_funcoes(valor)
 else:
-    buscar_por_end()
+    print('Obrigado! Saindo do Sistema...')
+    print()
