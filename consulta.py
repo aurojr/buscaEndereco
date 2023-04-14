@@ -28,8 +28,13 @@ def buscar_por_cep():
 
             print(
                 f'CEP: {cep}\nEndereço: {endereco}\nBairro: {bairro}\nCidade: {cidade}\nEstado: {uf}')
+
+            return dic_end
         except:
             print('CEP não encontrado, tente novamente')
+
+
+# dicionario_cep = buscar_por_cep()
 
 
 def buscar_por_end():
@@ -65,5 +70,6 @@ def buscar_por_end():
         print('Foram encontrados {} resultados'.format(len(tabela)))
         print()
         print(tabela)
+        return tabela
     except:
         print('Endereço não encontrado, tente novamente ')

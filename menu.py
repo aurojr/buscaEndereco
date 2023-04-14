@@ -1,6 +1,9 @@
 from lista_menu import lista
 from consulta import buscar_por_cep, buscar_por_end
+from save_file import save_file, save_xls
 import sys
+import os
+import time
 
 
 def menu():
@@ -23,7 +26,12 @@ def apontar_funcoes(valor):
         buscar_por_cep()
     elif valor == '2':
         buscar_por_end()
-    elif valor == 4:
+    elif valor == '3':
+        save_file()
+    elif valor == '3':
+        print('Obrigado! Saindo do Sistema...')
+        time.sleep(1)
+        os.system('cls')
         sys.exit()
 
 
