@@ -3,7 +3,7 @@
 ## ✍️ Processo        
 - Python    
 - Utilização de APIs      
-- Análise de Dados (Pandas)      
+- Tratamento de Dados (Biblioteca Pandas)   
 
 ## ⚙ Funcionalidades      
 - Demonstração de meus conhecimentos como desenvolvedor      
