@@ -2,8 +2,8 @@ import requests
 import pandas as pd
 
 
-def buscar_por_cep():
-    cep = input('Insira o CEP: ')
+def buscar_por_cep(cep):
+
     # trata o cep
     cep = cep.replace('.', '').replace('-', '')
 
@@ -27,38 +27,20 @@ def buscar_por_cep():
             print()
 
             print(
-                f'CEP: {cep}\nEndereço: {endereco}\nBairro: {bairro}\nCidade: {cidade}\nEstado: {uf}')
-
+                f'\033[92mCEP: {cep}\nEndereço: {endereco}\nBairro: {bairro}\nCidade: {cidade}\nEstado: {uf}\033[m')
+            print()
             return dic_end
         except:
+            print()
             print('CEP não encontrado, tente novamente')
-
+            print()
 
 # dicionario_cep = buscar_por_cep()
 
 
-def buscar_por_end():
+def buscar_por_end(uf, cidade, endereco):
     # parametros obrigatórios para busca por endereço
 
-    uf = input('Insira o Estado: ')  # minimo dois caracteres
-
-    while uf.isalpha() == False or len(uf) < 2 or len(uf) > 2:
-        print('Insira a silgla do Estado')
-        uf = input('Insira o Estado: ')
-
-    cidade = input('Insira a Cidade: ')  # minimo dois caracteres
-
-    while cidade.isalpha() == False and len(cidade) < 2:
-        print('Insira o nome da cidade - Minimo 2 caracteres')
-        cidade = input('Insira a Cidade: ')
-
-    endereco = input('Insira o Endereço ')  # minimo tres caracateres
-    while len(endereco) < 2:
-        print('Endereço deve conter mais de 3 caracteres')
-        endereco = input('Insira o Endereço ')
-
-    print()
-    print()
     try:
         endpoint = f'https://viacep.com.br/ws/{uf}/{cidade}/{endereco}/json/'
         requisicao = requests.get(endpoint)
@@ -73,3 +55,4 @@ def buscar_por_end():
         return tabela
     except:
         print('Endereço não encontrado, tente novamente ')
+        print()

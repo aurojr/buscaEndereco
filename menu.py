@@ -19,15 +19,32 @@ def menu():
         print('\033[33m[{}]\033[m - \033[34m{}\033[m'.format(c, item))
         c += 1
     print(barra)
+    print()
 
 
 def apontar_funcoes(valor):
     if valor == '1':
-        buscar_por_cep()
+        cep = input('Insira o CEP: ')
+        buscar_por_cep(cep)
+
     elif valor == '2':
-        buscar_por_end()
-    elif valor == '3':
-        save_file()
+        uf = input('Insira o Estado: ')  # minimo dois caracteres
+        while uf.isalpha() == False or len(uf) < 2 or len(uf) > 2:
+            print('Insira a silgla do Estado - minimo 2 caracteres')
+            uf = input('Insira o Estado: ')
+
+        cidade = input('Insira a Cidade: ')  # minimo dois caracteres
+        while cidade.isalpha() == False and len(cidade) < 1:
+            print('Insira o nome da cidade - Minimo 2 caracteres')
+            cidade = input('Insira a Cidade: ')
+
+        endereco = input('Insira o Endereço ')  # minimo tres caracateres
+        while len(endereco) <= 2:
+            print('Endereço deve conter mais de 3 caracteres')
+            endereco = input('Insira o Endereço ')
+            print()
+        buscar_por_end(uf, cidade, endereco)
+
     elif valor == '3':
         print('Obrigado! Saindo do Sistema...')
         time.sleep(1)
@@ -35,6 +52,5 @@ def apontar_funcoes(valor):
         sys.exit()
 
 
-def escolher_opcao():
-    valor = input('Escolha a sua opção: ')
-    return valor
+def escolher_opcao(opt):
+    return opt

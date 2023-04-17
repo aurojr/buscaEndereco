@@ -1,7 +1,9 @@
 from menu import menu, escolher_opcao, apontar_funcoes
 
-valor = ''
-while valor != '4':
+opcao = ''
+while opcao != '3':
     menu()
-    valor = escolher_opcao()
+    opcao = input('Escolha usa opção: ')
+    valor = escolher_opcao(opcao)
     apontar_funcoes(valor)
+    print()
