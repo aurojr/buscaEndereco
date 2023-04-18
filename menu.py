@@ -34,11 +34,10 @@ def apontar_funcoes(valor):
             uf = input('Insira o Estado: ')
 
         cidade = input('Insira a Cidade: ')  # minimo dois caracteres
-        while len(cidade) < 2 or not cidade.isalpha():
+        while len(cidade) < 2 or cidade.isnumeric():
             print('Insira o nome da cidade - Minimo 2 caracteres')
             cidade = input('Insira a Cidade: ')
 
-        
         endereco = input('Insira o Endereço ')  # minimo tres caracateres
         while len(endereco) <= 2:
             print('Endereço deve conter mais de 3 caracteres')
