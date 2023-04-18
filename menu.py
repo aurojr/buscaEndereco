@@ -38,9 +38,7 @@ def apontar_funcoes(valor):
             print('Insira o nome da cidade - Minimo 2 caracteres')
             cidade = input('Insira a Cidade: ')
 
-        print(len(cidade))
-        print(cidade.isalpha())
-
+        
         endereco = input('Insira o Endereço ')  # minimo tres caracateres
         while len(endereco) <= 2:
             print('Endereço deve conter mais de 3 caracteres')
