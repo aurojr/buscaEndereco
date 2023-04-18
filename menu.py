@@ -53,4 +53,5 @@ def apontar_funcoes(valor):
 
 
 def escolher_opcao(opt):
+    # Essa função não tem propósito. Pode ser removida.
     return opt
