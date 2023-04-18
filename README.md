@@ -11,6 +11,9 @@
 <!-- >Acesse a página on-line: <a href="https://portifolio-kelvin.vercel.app/" target=_blank> Portfólio Kelvin Charles Cruz </a>   
 🖱️ A página <img src="src/design/portfolio.gif" alt="Imagem exibindo a versão desktop  do site">   -->
 
+![buscaCEP](https://user-images.githubusercontent.com/111449638/232796153-7915e0b5-59db-4fb5-9b12-067c8cff1b50.gif)
+
+
 ## 📘	Documentação 
 ### Main.py  
 - Chama as funções de Menu, seleção de opções e as funcionalidades de consulta, salvar arquivo em excel e sair de sistema
