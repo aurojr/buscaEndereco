@@ -1,4 +1,4 @@
-from menu import menu, escolher_opcao, apontar_funcoes
+from menu import apontar_funcoes, escolher_opcao, menu
 
 opcao = ''
 while opcao != '3':

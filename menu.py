@@ -1,9 +1,10 @@
-from lista_menu import lista
-from consulta import buscar_por_cep, buscar_por_end
-from save_file import save_file, save_xls
-import sys
 import os
+import sys
 import time
+
+from consulta import buscar_por_cep, buscar_por_end
+from lista_menu import lista
+from save_file import save_file, save_xls
 
 
 def menu():

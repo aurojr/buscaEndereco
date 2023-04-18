@@ -1,5 +1,6 @@
-from consulta import buscar_por_cep, buscar_por_end
 import pandas as pd
+
+from consulta import buscar_por_cep, buscar_por_end
 
 
 def save_file():
