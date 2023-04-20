@@ -1,3 +1,1 @@
-lista = ['Buscar por CEP',
-         'Buscar Endereço',
-         'Sair do Sistema']
+lista = ["Buscar por CEP", "Buscar Endereço", "Sair do Sistema"]
