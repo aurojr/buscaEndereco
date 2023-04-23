@@ -1,5 +1,6 @@
 import pandas as pd
 import requests
+from termcolor import colored
 
 
 def buscar_por_cep(cep):
@@ -48,7 +49,18 @@ def buscar_por_end(uf, cidade, endereco):
         requisicao = requisicao.json()
 
         tabela = pd.DataFrame(requisicao)
-        tabela = tabela[["cep", "logradouro", "bairro", "localidade", "uf"]]
+        tabela = tabela.rename(
+            columns={
+                "cep": "CEP",
+                "logradouro": "Logradouro",
+                "localidade": "Localidade",
+                "bairro": "Bairro",
+                "uf": "UF",
+            }
+        )
+        tabela = colored(
+            tabela[["CEP", "Logradouro", "Bairro", "Localidade", "UF"]], "green"
+        )
 
         print("Foram encontrados {} resultados".format(len(tabela)))
         print()

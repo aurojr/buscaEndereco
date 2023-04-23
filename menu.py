@@ -48,7 +48,7 @@ def apontar_funcoes(valor):
         buscar_por_end(uf, cidade, endereco)
 
     elif valor == "3":
-        print("Obrigado! Saindo do Sistema...")
+        print(f"\033[96mObrigado! Saindo do Sistema...")
         time.sleep(1)
         os.system("cls")
         sys.exit()
